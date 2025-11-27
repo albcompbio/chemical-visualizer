@@ -157,7 +157,9 @@ class GeneratePDFView(APIView):
             title_style = styles['Title']
             story.append(Paragraph(f"Report for: {dataset.filename}", title_style))
             story.append(Spacer(1, 12))
-            story.append(Paragraph(f"Uploaded at: {dataset.uploaded_at.strftime('%Y-%m-%d %H:%M:%S')}", styles['Normal']))
+            from django.utils import timezone
+            local_dt = timezone.localtime(dataset.uploaded_at)
+            story.append(Paragraph(f"Uploaded at: {local_dt.strftime('%Y-%m-%d %H:%M:%S')}", styles['Normal']))
             story.append(Spacer(1, 24))
 
             # 1. Equipment Distribution (Pie Chart)

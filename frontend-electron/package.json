@@ -1,0 +1,35 @@
+{
+    "name": "chemical-visualizer-electron",
+    "version": "1.0.0",
+    "description": "Electron desktop wrapper for Chemical Visualizer React frontend",
+    "main": "main.js",
+    "scripts": {
+        "dev": "electron .",
+        "build-react": "cd ../frontend-web && npm install && npm run build",
+        "build": "npm run build-react && electron-builder"
+    },
+    "devDependencies": {
+        "electron": "^23.3.13",
+        "electron-builder": "^23.6.0"
+    },
+    "build": {
+        "appId": "com.chemicalvisualizer.app",
+        "productName": "Chemical Visualizer",
+        "win": {
+            "target": "nsis"
+        },
+        "files": [
+            "**/*",
+            {
+                "from": "../frontend-web/dist",
+                "to": "frontend-web/dist",
+                "filter": [
+                    "**/*"
+                ]
+            }
+        ],
+        "directories": {
+            "output": "dist"
+        }
+    }
+}

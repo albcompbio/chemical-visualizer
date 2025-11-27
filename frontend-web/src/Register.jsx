@@ -14,7 +14,18 @@ function Register({ onRegisterSuccess, onSwitchToLogin }) {
             onRegisterSuccess();
             alert("Registration successful! Please login.");
         } catch (err) {
-            setError('Registration failed. Username may be taken.');
+            console.error("Registration error:", err);
+            if (err.response && err.response.data) {
+                // Try to extract specific error message from Django response
+                const msg = typeof err.response.data === 'string'
+                    ? err.response.data
+                    : Object.values(err.response.data).flat().join(' ');
+                setError(msg || 'Registration failed.');
+            } else if (err.message) {
+                setError(err.message);
+            } else {
+                setError('Registration failed. Please check your connection.');
+            }
         }
     };
 
