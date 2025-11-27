@@ -1,0 +1,6 @@
+Upload error: table equipment_dataset has no column named user_id
+Upload error: table equipment_dataset has no column named user_id
+Upload error: Cannot describe a DataFrame without columns
+Upload error: CHECK constraint failed: (JSON_VALID("summary") OR "summary" IS NULL)
+Upload error: CHECK constraint failed: (JSON_VALID("summary") OR "summary" IS NULL)
+Upload error: CHECK constraint failed: (JSON_VALID("summary") OR "summary" IS NULL)
