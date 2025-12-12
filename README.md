@@ -1,5 +1,18 @@
-🌡️ Chemical Equipment Parameter Visualizer
+Chemical Equipment Parameter Visualizer
 Hybrid Web + Desktop Application (Django + React + Electron)
+
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Django](https://img.shields.io/badge/Django-Backend-0C4B33)
+![DRF](https://img.shields.io/badge/DRF-API%20Framework-red)
+![React](https://img.shields.io/badge/React-Frontend-61DAFB)
+![Electron](https://img.shields.io/badge/Electron-Desktop%20App-2f3241)
+![Vite](https://img.shields.io/badge/Vite-Bundler-purple)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-UI%20Styling-38B2AC)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Processing-150458)
+![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-013243)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-orange)
+![ReportLab](https://img.shields.io/badge/ReportLab-PDF%20Generation-yellow)
+![SQLite](https://img.shields.io/badge/SQLite-Local%20DB-003B57)
 
 A powerful hybrid application designed for chemical engineers and data analysts to upload equipment datasets, visualize parameter trends, generate PDF reports, and manage historical data — all available both on web and desktop.
 
@@ -45,6 +58,7 @@ Matplotlib
 ReportLab
 
 📂 Project Structure
+
 chemical-visualizer/
 │── backend/                # Django API server
 │── frontend-web/           # React frontend (web)
@@ -52,6 +66,7 @@ chemical-visualizer/
 │── README.md
 
 How to Run the Application
+
 1️⃣ Backend (Django)
 cd backend
 pip install -r requirements.txt
